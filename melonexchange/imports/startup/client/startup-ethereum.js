@@ -11,9 +11,6 @@ if (typeof web3 !== 'undefined') {
 
 var contract = require("truffle-contract");
 exchange = contract(Exchange);
-// exchange.setProvider(new Web3.providers.HttpProvider('http://localhost:8545'), () => {
-//     console.log("Exchange Dapp Initialized, biattchhh");
-// });
 exchange.setProvider(web3.currentProvider, () => {
     console.log("Provider set");
 });

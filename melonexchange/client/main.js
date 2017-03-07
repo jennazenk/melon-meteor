@@ -5,12 +5,6 @@ import '/imports/startup/client/startup-ethereum.js';
 
 import './main.html';
 
-// myContract.deployed().then((instance) => {
-//     var deployed = instance;
-//     return deployed;
-// })
-
-
 
 //User infos from metamask
 var userAddress = web3.eth.accounts[0];
@@ -32,24 +26,24 @@ exchange.at("0x9646756721bf3eb9c46fdf8b19f59d9f6a29c614").then(function(instance
     Session.set('lastOfferId', lastOfferId.toNumber());
     Session.set('secondLastId', lastOfferId.toNumber() - 1);
     return exchangeInstance.isActive(lastOfferId)
-}).then(function(bool) {
+}).then(function(bool) {    //isActive function on last offer
     Session.set('isActive1', bool);
     return exchangeInstance.isActive(Session.get('secondLastId'))
-}).then(function(bool) {
+}).then(function(bool) { //isActive function on second last offer
     Session.set('isActive2', bool);
     return exchangeInstance.getOwner(Session.get('lastOfferId'))
-}).then(function(owner) {
+}).then(function(owner) { //getOwner on last offer
     Session.set('getOwner1', owner);
     return exchangeInstance.getOwner(Session.get('secondLastId'))
-}).then(function(owner) {
+}).then(function(owner) { //getOwner on second last offer
     Session.set('getOwner2', owner);
     return exchangeInstance.getOffer(Session.get('lastOfferId'))
-}).then(function(offer) {
+}).then(function(offer) { //getting the data for last offer
     Session.set('getOffer', offer);
-    Session.set('buyQty', offer[2] / (Math.pow(10, 18)));
+    Session.set('buyQty', offer[2] / (Math.pow(10, 18))); //TODO : get precision directly from contract
     Session.set('sellToken', offer[1]);
     Session.set('buyToken', offer[3]);
-    Session.set('sellQty', offer[0] / (Math.pow(10, 8)));
+    Session.set('sellQty', offer[0] / (Math.pow(10, 8))); //TODO : get precision directly from contract
     return asset.at(Session.get('sellToken')) //instantiation of asset at sell token address
 }).then(function(sellAssetInstance) {
     return sellAssetInstance.name()
