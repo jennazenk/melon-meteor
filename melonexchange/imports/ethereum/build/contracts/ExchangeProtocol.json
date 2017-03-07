@@ -1,0 +1,290 @@
+{
+  "contract_name": "ExchangeProtocol",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
+      "name": "cancel",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
+      "name": "getOffer",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "name": "",
+          "type": "address"
+        },
+        {
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getLastOfferId",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
+      "name": "isActive",
+      "outputs": [
+        {
+          "name": "active",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
+      "name": "getOwner",
+      "outputs": [
+        {
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "name": "quantity",
+          "type": "uint256"
+        }
+      ],
+      "name": "buy",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "sell_how_much",
+          "type": "uint256"
+        },
+        {
+          "name": "sell_which_token",
+          "type": "address"
+        },
+        {
+          "name": "buy_how_much",
+          "type": "uint256"
+        },
+        {
+          "name": "buy_which_token",
+          "type": "address"
+        }
+      ],
+      "name": "offer",
+      "outputs": [
+        {
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "id",
+          "type": "uint256"
+        }
+      ],
+      "name": "ItemUpdate",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "sell_how_much",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "name": "sell_which_token",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "buy_how_much",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "name": "buy_which_token",
+          "type": "address"
+        }
+      ],
+      "name": "Trade",
+      "type": "event"
+    }
+  ],
+  "unlinked_binary": "0x606060405234610000575b61020d806100196000396000f300606060405236156100675763ffffffff60e060020a60003504166340e58ee5811461006c5780634579268a1461009057806359e148fc146100d157806382afd23b1461006c578063c41a360a14610114578063d6febde814610140578063f09ea2a614610167575b610000565b346100005761007c60043561019f565b604080519115158252519081900360200190f35b34610000576100a06004356101a7565b60408051948552600160a060020a039384166020860152848101929092529091166060830152519081900360800190f35b34610000576100de6101b7565b60408051918252519081900360200190f35b346100005761007c60043561019f565b604080519115158252519081900360200190f35b346100005761012460043561019f565b60408051600160a060020a039092168252519081900360200190f35b346100005761007c6004356024356101cd565b604080519115158252519081900360200190f35b34610000576100de600435600160a060020a0360243581169060443590606435166101d6565b60408051918252519081900360200190f35b60005b919050565b60006000600060005b9193509193565b60005b90565b60005b919050565b60005b919050565b60005b92915050565b60005b9493505050505600a165627a7a723058200def63b524ec7797a2f8164c287cab05e50f3a5c2e011c2517796bc2b1ad47d90029",
+  "networks": {
+    "1488842779777": {
+      "events": {
+        "0xde857d2761836ca6234345c7f7f4c783271ed7d1aedf9268b3fe32800d186fde": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "id",
+              "type": "uint256"
+            }
+          ],
+          "name": "ItemUpdate",
+          "type": "event"
+        },
+        "0xa5ca35f5c7b1c108bbc4c25279f619f720805890f993005d9f00ef1e32663f9b": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "sell_how_much",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "sell_which_token",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "buy_how_much",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "buy_which_token",
+              "type": "address"
+            }
+          ],
+          "name": "Trade",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x9c3b1de2e04a75b08e1813bc9c9f2005eefe3c75",
+      "updated_at": 1488845760985
+    },
+    "1488839242820": {
+      "events": {
+        "0xde857d2761836ca6234345c7f7f4c783271ed7d1aedf9268b3fe32800d186fde": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "id",
+              "type": "uint256"
+            }
+          ],
+          "name": "ItemUpdate",
+          "type": "event"
+        },
+        "0xa5ca35f5c7b1c108bbc4c25279f619f720805890f993005d9f00ef1e32663f9b": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "sell_how_much",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "sell_which_token",
+              "type": "address"
+            },
+            {
+              "indexed": false,
+              "name": "buy_how_much",
+              "type": "uint256"
+            },
+            {
+              "indexed": true,
+              "name": "buy_which_token",
+              "type": "address"
+            }
+          ],
+          "name": "Trade",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x4961c3060500e24a118c859e6eb76a826516377b",
+      "updated_at": 1488850358130
+    }
+  },
+  "schema_version": "0.0.5",
+  "updated_at": 1488850358130
+}
