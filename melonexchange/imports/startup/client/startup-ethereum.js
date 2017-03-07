@@ -1,5 +1,6 @@
 import { default as Web3 } from 'web3';
-json = require('/imports/ethereum/build/contracts/Exchange.json');
+Exchange = require('/imports/ethereum/build/contracts/Exchange.json');
+Asset = require('/imports/ethereum/build/contracts/Asset.json');
 
 if (typeof web3 !== 'undefined') {
   web3 = new Web3(web3.currentProvider);
@@ -9,10 +10,16 @@ if (typeof web3 !== 'undefined') {
 }
 
 var contract = require("truffle-contract");
-myContract = contract(json);
-// myContract.setProvider(new Web3.providers.HttpProvider('http://localhost:8545'), () => {
+exchange = contract(Exchange);
+// exchange.setProvider(new Web3.providers.HttpProvider('http://localhost:8545'), () => {
 //     console.log("Exchange Dapp Initialized, biattchhh");
 // });
-myContract.setProvider(web3.currentProvider, () => {
+exchange.setProvider(web3.currentProvider, () => {
+    console.log("Provider set");
+});
+
+
+asset = contract(Asset);
+asset.setProvider(web3.currentProvider, () => {
     console.log("Provider set");
 });

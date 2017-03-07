@@ -1,9 +1,9 @@
-<head>
+<!-- <head>
   <title>myDapp</title>
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+  <h1>Welcome to the Melon exchange</h1>
 
   {{> hello}}
   {{> info}}
@@ -22,4 +22,73 @@
     <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
     <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
   </ul>
+</template> -->
+
+<head>
+    <title>Melon Challenge</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1>Welcome to the Melon challenge exchange !</h1> {{> offers}}
+</body>
+<template name="offers">
+    <br>
+    <br>
+    <br>
+    <h3>Your wallet address : </h3>
+    <p id="useraddress">{{account}}</p>
+    <h3>Your account balance : </h3>
+    <p id="userbalance">{{balance}}</p>
+    <br>
+    <br>
+    <br>
+    <h3>Order book</h3>
+    <table>
+        <tr>
+            <th class="table">Offer ID</th>
+            <th class="table">Owner</th>
+            <th class="table">Active ?</th>
+            <th class="table">Buy</th>
+            <th class="table">Qty</th>
+            <th class="table">Sell</th>
+            <th class="table">Qty</th>
+        </tr>
+        <tr>
+            <td id="offer1id">{{lastId}} </td>
+            <td id="offer1owner">{{owner1}}</td>
+            <td id="offer1active">{{isActive1}}</td>
+            <th id="offer1buy">{{buyToken}}</th>
+            <th id="offer1buyprice">{{buyQty}}</th>
+            <th id="offer1sell">{{sellToken}}</th>
+            <th id="offer1sellprice">{{sellQty}}</th>
+        </tr>
+        <tr>
+            <td id="offer2id">{{secondLastId}}</td>
+            <td id="offer2owner">{{owner2}}</td>
+            <td id="offer2active">{{isActive2}}</td>
+            <th id="offer2buy">N/A</th>
+            <th id="offer2buyprice">N/A</th>
+            <th id="offer2sell">N/A</th>
+            <th id="offer2sellprice">N/A</th>
+        </tr>
+        <tr>
+            <td id="offer3id"> ###</td>
+            <td id="offer3owner">###</td>
+            <td id="offer3active">###</td>
+            <th id="offer3buy">###</th>
+            <th id="offer3buyprice">###</th>
+            <th id="offer3sell">###</th>
+            <th id="offer3sellprice">###</th>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 </template>

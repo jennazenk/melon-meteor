@@ -1,1 +1,85 @@
+body {
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 10%;
+    font-family: "Courier New", Courier, monospace;
+}
+
+div {
+    font-weight: bold;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+h1 {
+	text-align: center;
+}
+
+h1,
+.table {
+    color: #8a00e6;
+}
+
+form {
+    display: inline;
+}
+
+#trade {
+    padding: 5px;
+    text-align: center;
+    background-color: #d9d9d9;
+}
+
+select {
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+}
+
+form input {
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+}
+
+button {
+    background-color: #8a00e6;
+    border: none;
+    color: white;
+    padding: 10px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 13px;
+    margin: auto;
+}
+
+#even {
+    background-color: #ffffcc;
+}
+
+#oddies {
+    background-color: #d9d9d9;
+}
+
+#useraddress, #userbalance {
+	color:#8a00e6;
+	font-weight: bold;
+}
 /* CSS declarations go here */
